@@ -1,0 +1,101 @@
+{
+  "seed": 42,
+  "k": 10,
+  "primary_metric": "NDCG@10",
+  "source": "https://cseweb.ucsd.edu/~jmcauley/datasets/amazon/links.html",
+  "source_files": [
+    "ratings_Video_Games.csv",
+    "meta_Video_Games.json.gz"
+  ],
+  "sha256": {
+    "ratings_Video_Games.csv": "f0ca171050c2e0f208d47f5267992476b21ab68a01439c21c8be1a4432982cfa",
+    "meta_Video_Games.json.gz": "b7bf4c724632874b931056e48957775822c6f0c9092f5bbf2d449694bec36180"
+  },
+  "train_end_utc": "2013-07-01T00:00:00+00:00",
+  "valid_end_utc": "2014-01-01T00:00:00+00:00",
+  "cohort": {
+    "max_items": 4000,
+    "min_train_interactions": 3,
+    "raw_rows": 1324753,
+    "clean_rows": 1324753,
+    "selected_rows": 186358,
+    "users": 33616,
+    "items": 3997
+  },
+  "evaluation_users": {
+    "validation": 2214,
+    "test": 1595
+  },
+  "selected_params": {
+    "ItemKNN": {
+      "k": 150,
+      "shrinkage": 20
+    },
+    "iALS": {
+      "alpha": 20,
+      "factors": 64,
+      "iterations": 15,
+      "reg": 1,
+      "seed": 42
+    },
+    "EASE": {
+      "reg": 50
+    },
+    "FM": {
+      "batch_size": 4096,
+      "epochs": 12,
+      "factors": 16,
+      "lr": 0.01,
+      "negative_ratio": 1,
+      "seed": 42,
+      "weight_decay": 0.0001
+    },
+    "CustomALS": {
+      "alpha": 20,
+      "factors": 64,
+      "half_life_days": 365,
+      "iterations": 15,
+      "reg": 10,
+      "seed": 42
+    },
+    "FM IDs": {
+      "batch_size": 4096,
+      "epochs": 12,
+      "factors": 32,
+      "lr": 0.01,
+      "negative_ratio": 1,
+      "seed": 42,
+      "use_metadata": false,
+      "weight_decay": 1e-05
+    },
+    "CustomALS matched": {
+      "alpha": 20,
+      "factors": 64,
+      "iterations": 15,
+      "reg": 1,
+      "seed": 42,
+      "half_life_days": 365
+    },
+    "FM IDs matched": {
+      "batch_size": 4096,
+      "epochs": 12,
+      "factors": 16,
+      "lr": 0.01,
+      "negative_ratio": 1,
+      "seed": 42,
+      "weight_decay": 0.0001,
+      "use_metadata": false
+    }
+  },
+  "python": "3.13.5",
+  "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+  "packages": {
+    "numpy": "2.5.2",
+    "scipy": "1.18.1",
+    "pandas": "2.3.3",
+    "matplotlib": "3.11.1",
+    "torch": "2.9.0",
+    "threadpoolctl": "3.5.0"
+  },
+  "cpu_threads": 2
+}

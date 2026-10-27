@@ -1,0 +1,61 @@
+{
+  "ItemKNN": {
+    "k": 150,
+    "shrinkage": 20
+  },
+  "iALS": {
+    "alpha": 20,
+    "factors": 64,
+    "iterations": 15,
+    "reg": 1,
+    "seed": 42
+  },
+  "EASE": {
+    "reg": 50
+  },
+  "FM": {
+    "batch_size": 4096,
+    "epochs": 12,
+    "factors": 16,
+    "lr": 0.01,
+    "negative_ratio": 1,
+    "seed": 42,
+    "weight_decay": 0.0001
+  },
+  "CustomALS": {
+    "alpha": 20,
+    "factors": 64,
+    "half_life_days": 365,
+    "iterations": 15,
+    "reg": 10,
+    "seed": 42
+  },
+  "FM IDs": {
+    "batch_size": 4096,
+    "epochs": 12,
+    "factors": 32,
+    "lr": 0.01,
+    "negative_ratio": 1,
+    "seed": 42,
+    "use_metadata": false,
+    "weight_decay": 1e-05
+  },
+  "CustomALS matched": {
+    "alpha": 20,
+    "factors": 64,
+    "iterations": 15,
+    "reg": 1,
+    "seed": 42,
+    "half_life_days": 365
+  },
+  "FM IDs matched": {
+    "batch_size": 4096,
+    "epochs": 12,
+    "factors": 16,
+    "lr": 0.01,
+    "negative_ratio": 1,
+    "seed": 42,
+    "weight_decay": 0.0001,
+    "use_metadata": false
+  }
+}
